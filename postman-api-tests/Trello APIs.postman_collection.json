@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "86f4d067-a48f-4a20-9c40-45bac99a59e2",
+		"name": "Trello APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19570397"
+	},
+	"item": [
+		{
+			"name": "Create a Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"FeyiBoard\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{trelloBaseURL}}?key={{trelloKey}}&token={{trelloToken}}",
+					"host": [
+						"{{trelloBaseURL}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{trelloBaseURL}}{{trelloid}}?key={{trelloKey}}&token={{trelloToken}}",
+					"host": [
+						"{{trelloBaseURL}}{{trelloid}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Board Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{trelloBaseURL}}6299e1b67c0af96961ff28b3?key={{trelloKey}}&token={{trelloToken}}",
+					"host": [
+						"{{trelloBaseURL}}6299e1b67c0af96961ff28b3"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
